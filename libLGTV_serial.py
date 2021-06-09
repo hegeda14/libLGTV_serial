@@ -56,7 +56,7 @@ actual_codes['PJ250_etc'].update({
 })
 actual_codes['LE5300_etc'] = common_codes.copy()
 actual_codes['LE5300_etc'].update({
-    'inputdtv'              : b"xb 00 00",
+    'inputdtv'              : b"xb 00 00",  
     'inputanalogantenna'    : b"xb 00 10",
     'inputanalogcable'      : b"xb 00 11",
     'inputav1'              : b"xb 00 20",
@@ -105,6 +105,18 @@ actual_codes['02C_etc'].update({
     'inputhdmipc'   : b"kb 00 09",
     'inputstatus'   : b"kb 00 ff"
 })
+actual_codes['7WDP_etc'] = common_codes.copy()
+actual_codes['7WDP_etc'].update({
+    'inputdigitalantenna'   : b"xb 00 00",
+    'inputanalogantenna'    : b"xb 00 10",
+    'inputav1'              : b"xb 00 20",
+    'inputav2'              : b"xb 00 21",
+    'inputcomp1'            : b"xb 00 40",
+    'inputdvi'              : b"xb 00 80",
+    'inputvga'              : b"xb 00 60",
+    'inputhdmi'             : b"xb 00 90",
+    'inputstatus'           : b"xb 00 ff"
+})
 reverse_code_map = {
     'LK450_etc': ('LV2500', 'LV2520', 'LV3500', 'LV3520', 'LK330', 'LK430', 'LK450',
                     'LK520', 'PW340', 'PW350', 'PW350U', 'PW350R', 'LH20', 'LH200C',
@@ -117,7 +129,8 @@ reverse_code_map = {
                     'LV3700', 'LV5400', 'LV5500', 'LV9500', 'LK530', 'LK550', 'PZ750',
                     'PZ950', 'PZ950U'),
     '01C_etc': ('01C', '01C-BA'),
-    '02C_etc': ('02C', '02C-BA', '02C-BH')
+    '02C_etc': ('02C', '02C-BA', '02C-BH'),
+    '7WDP_etc': ('7WDP-PC', '7WDP-PZ')
 }
 all_codes = {}
 # populate model suffix lookup hash
